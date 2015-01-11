@@ -1,0 +1,34 @@
+<!--
+  Copyright (c) 2014, <your name>. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<!-- import polymer-element's definition -->
+<link rel="import" href="../../packages/polymer/polymer.html">
+
+<link rel="import" href="../../packages/paper_elements/paper_input.html">
+
+<polymer-element name="admin-app">
+    <template>
+        <style>
+            :host {
+                background-color: LemonChiffon;
+                text-align: center;
+                display: inline-block;
+                border: solid 1px;
+                padding: 10px 10px 10px 10px;
+            }
+        </style>
+
+        <div class="bg-container">
+            <h1>Check In: Admin</h1>
+            <div class="bg-container">
+                <br><br><br>
+                <button on-click="{{resetCheckIn}}">Reset LocalArea</button>
+                <br><br>
+                <button on-click="{{loadTestData}}">Load Test Data</button>
+            </div>
+        </div>
+    </template>
+    <script type="application/dart" src="admin_app.dart"></script>
+</polymer-element>

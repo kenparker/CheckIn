@@ -1,6 +1,6 @@
 import 'dart:html';
 import 'package:polymer/polymer.dart';
-import 'Controller.dart';
+import '../Model/Controller.dart';
 
 @CustomTag('main-app')
 class MainApp extends PolymerElement {
@@ -41,16 +41,5 @@ class MainApp extends PolymerElement {
     counter = controller.getTotal();
     totalCrazy = controller.getTotalCrazyBean();
   }
-
-  void resetCheckIn(Event e, var detail, Node target) {
-    controller.clearLocalStorage();
-    refreshMap();
-  }
-
-  void loadTestData(Event e, var detail, Node target) {
-    controller.loadTestData();
-    counter = controller.getTotal();
-  }
-
 
 }
