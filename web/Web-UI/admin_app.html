@@ -1,12 +1,8 @@
-<!--
-  Copyright (c) 2014, <your name>. All rights reserved. Use of this source code
-  is governed by a BSD-style license that can be found in the LICENSE file.
--->
 
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
 
-<link rel="import" href="../../packages/paper_elements/paper_input.html">
+<link rel="import" href="../../packages/paper_elements/paper_button.html">
 
 <polymer-element name="admin-app">
     <template>
@@ -18,15 +14,47 @@
                 border: solid 1px;
                 padding: 10px 10px 10px 10px;
             }
+
+            section {
+                padding: 20px 0;
+            }
+
+            section > div {
+                padding: 14px;
+                font-size: 16px;
+            }
+
+            paper-button.colored {
+                color: #4285f4;
+            }
+
+            paper-button[raised].colored {
+                background: #4285f4;
+                color: #fff;
+            }
+
+            paper-button.custom > core-icon {
+                margin-right: 4px;
+            }
+
+            paper-button.hover:hover {
+                background: #eee;
+            }
+
+            paper-button.blue-ripple::shadow #ripple {
+                color: #4285f4;
+            }
         </style>
 
         <div class="bg-container">
             <h1>Check In: Admin</h1>
+
             <div class="bg-container">
-                <br><br><br>
-                <button on-click="{{resetCheckIn}}">Reset LocalArea</button>
-                <br><br>
-                <button on-click="{{loadTestData}}">Load Test Data</button>
+                <br/><br/><br/>
+                <paper-button raised class="colored" on-click="{{resetCheckIn}}">Reset LocalArea</paper-button>
+                <br/><br/>
+                <paper-button raised class="colored" on-click="{{loadTestData}}">Load Test Data</paper-button>
+
             </div>
         </div>
     </template>

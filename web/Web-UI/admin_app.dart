@@ -13,7 +13,6 @@ class AdminApp extends PolymerElement {
 
   void resetCheckIn(Event e, var detail, Node target) {
     controller.clearLocalStorage();
-    refreshMap();
   }
 
   void loadTestData(Event e, var detail, Node target) {
