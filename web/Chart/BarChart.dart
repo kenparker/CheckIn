@@ -15,11 +15,7 @@ void main() {
               'strokeColor' : "rgba(220,220,220,1)",
               'data' : [65,59,90,81,56,55,40]
           },
-          {
-              'fillColor' : "rgba(255,255,255,1)",
-              'strokeColor' : "rgba(0,0,255,0.5)",
-              'data' : [28,48,40,19,null,27,100]
-          }
+
       ]
 
   }, null);
