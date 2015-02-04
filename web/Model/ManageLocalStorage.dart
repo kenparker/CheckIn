@@ -1,6 +1,6 @@
 library ManageLocalStorage;
 
-import 'dart:html';
+import 'dart:html' show Storage, window;
 import 'CheckIn.dart';
 
 class ManageLocalStorage {

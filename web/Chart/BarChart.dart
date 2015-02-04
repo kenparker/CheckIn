@@ -4,7 +4,7 @@ import 'dart:html';
 import 'package:chart/chart.dart';
 
 
-void drawBarChart() {
+void main() {
 
 
   Bar bar = new Bar({

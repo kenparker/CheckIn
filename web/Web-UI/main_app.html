@@ -1,9 +1,12 @@
 
 <!-- import polymer-element's definition -->
 <link rel="import" href="../../packages/polymer/polymer.html">
-
 <link rel="import" href="../../packages/paper_elements/paper_button.html">
 
+<!-- import chart -->
+<link rel="import" href="../Chart/barchart.html">
+
+<link rel="import" href="">
 <polymer-element name="main-app">
     <template>
         <style>
@@ -49,7 +52,10 @@
         <div class="bg-container">
             <h1>Check In</h1>
 
-            <div class="bg-container">
+            <div class="bg-container"
+                <div>
+                    <barchart></barchart>
+                </div>
                 <div class="">
                     Total : {{counter}}
                     <br>

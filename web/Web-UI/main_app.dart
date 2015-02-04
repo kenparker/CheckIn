@@ -1,5 +1,5 @@
-import 'dart:html';
-import 'package:polymer/polymer.dart';
+import 'dart:html' show Event, Node;
+import 'package:polymer/polymer.dart' show CustomTag, observable, PolymerElement;
 import '../Model/Controller.dart';
 
 @CustomTag('main-app')

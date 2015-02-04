@@ -1,7 +1,7 @@
 library CheckIn;
 
 import 'Location.dart';
-import 'ManageLocalStorage.dart';
+//import 'ManageLocalStorage.dart';
 
 class CheckInList {
 
