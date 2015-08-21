@@ -33,7 +33,7 @@ class CheckInMonths {
     String totalElementsAllMonths = '';
     months.forEach((month, checkIn) {
       int number = checkIn.countElements();
-      String totalElementsOneMonth = "$month Number of Elements : $number";
+      String totalElementsOneMonth = "$month / $number";
       totalElementsAllMonths = totalElementsAllMonths + totalElementsOneMonth + '\n';
       //print(totalElementsOneMonth);
     });

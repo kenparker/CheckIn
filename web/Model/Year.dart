@@ -33,7 +33,7 @@ class CheckInYears {
     String totalElementsOneYear = '';
     years.forEach((year, checkInMonth) {
       int number = checkInMonth.countMapElements();
-      totalElementsOneYear = totalElementsOneYear + "$year Number of elements : $number" + '\n';
+      totalElementsOneYear = totalElementsOneYear + "$year / $number" + '\n';
       //print(string);
       String totalElementsAllMonths = checkInMonth.printTotalsMap();
       //print(totalElementsAllMonths);
