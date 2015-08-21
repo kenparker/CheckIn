@@ -28,11 +28,17 @@ class Month {
 class CheckInMonths {
   Map<Month, CheckInList> months = new Map();
 
-  void printTotalsMap() {
+  String printTotalsMap() {
+
+    String totalElementsAllMonths = '';
     months.forEach((month, checkIn) {
       int number = checkIn.countElements();
-      print("$month Number of Elements : $number");
+      String totalElementsOneMonth = "$month Number of Elements : $number";
+      totalElementsAllMonths = totalElementsAllMonths + totalElementsOneMonth + '\n';
+      //print(totalElementsOneMonth);
     });
+
+    return totalElementsAllMonths;
   }
 
   String toString() {

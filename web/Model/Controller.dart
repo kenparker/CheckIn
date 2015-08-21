@@ -22,6 +22,11 @@ class Controller {
     return cil.countElements(location1);
   }
 
+  String getDetailGlypto() {
+     String totalElementsOneYear = cil.printElements(location1);
+    return totalElementsOneYear;
+  }
+
   void checkInVorholz() {
     CheckIn checkin1 = new CheckIn(new DateTime.now());
     cil.addCheckIn(location2, checkin1);
@@ -32,6 +37,11 @@ class Controller {
     return cil.countElements(location2);
   }
 
+  String getDetailVorholz() {
+    String totalElementsOneYear = cil.printElements(location2);
+    return totalElementsOneYear;
+  }
+
   void checkInCrazyBean() {
     CheckIn checkin1 = new CheckIn(new DateTime.now());
     cil.addCheckIn(location3, checkin1);
@@ -40,6 +50,11 @@ class Controller {
 
   int getTotalCrazyBean() {
     return cil.countElements(location3);
+  }
+
+  String getDetailCrazyBean() {
+    String totalElementsOneYear = cil.printElements(location3);
+    return totalElementsOneYear;
   }
 
   void loadData() {
@@ -89,6 +104,7 @@ class Controller {
   }
 
   int getTotal() {
+    //cil.printDetailsMap();
     return cil.countMapElements();
   }
 

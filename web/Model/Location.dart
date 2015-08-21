@@ -60,6 +60,12 @@ class Location {
     else return 0;
   }
 
+  String printElements(Location location) {
+    String totalElementsOneYear = this.locations[location].printTotalsMap();
+    //print(totalElementsOneYear);
+    return totalElementsOneYear;
+  }
+
   int countMapElements() {
     int counter = 0;
     this.locations.forEach((k,v) {

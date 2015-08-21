@@ -29,12 +29,17 @@ class Year {
 class CheckInYears {
   Map<Year, CheckInMonths> years = new Map();
 
-  void printTotalsMap() {
+  String printTotalsMap() {
+    String totalElementsOneYear = '';
     years.forEach((year, checkInMonth) {
       int number = checkInMonth.countMapElements();
-      print("$year Number of elements : $number");
-      checkInMonth.printTotalsMap();
+      totalElementsOneYear = totalElementsOneYear + "$year Number of elements : $number" + '\n';
+      //print(string);
+      String totalElementsAllMonths = checkInMonth.printTotalsMap();
+      //print(totalElementsAllMonths);
+      totalElementsOneYear = totalElementsOneYear + totalElementsAllMonths;
     });
+    return totalElementsOneYear;
   }
 
   String toString() {
@@ -66,6 +71,7 @@ class CheckInYears {
     years.forEach((k,v){
       counter = counter + countElements(k);
     });
+    //printTotalsMap();
     return counter;
   }
 

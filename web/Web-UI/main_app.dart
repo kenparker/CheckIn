@@ -9,14 +9,20 @@ class MainApp extends PolymerElement {
 
   @observable int counter;
   @observable int totalGlypto;
+  @observable String detailGlypto;
   @observable int totalVorholzer;
+  @observable String detailVorholzer;
   @observable int totalCrazy;
+  @observable String detailCrazy;
 
   void refreshMap() {
     counter = controller.getTotal();
     totalGlypto = controller.getTotalGlypto();
+    detailGlypto = controller.getDetailGlypto();
     totalVorholzer = controller.getTotalVorholz();
+    detailVorholzer = controller.getDetailVorholz();
     totalCrazy = controller.getTotalCrazyBean();
+    detailCrazy = controller.getDetailCrazyBean();
   }
 
   MainApp.created() : super.created() {
@@ -26,20 +32,17 @@ class MainApp extends PolymerElement {
 
   void checkInGlypto(Event e, var detail, Node target) {
     controller.checkInGlypto();
-    counter = controller.getTotal();
-    totalGlypto = controller.getTotalGlypto();
+    refreshMap();
   }
 
   void checkInVorholz(Event e, var detail, Node target) {
     controller.checkInVorholz();
-    counter = controller.getTotal();
-    totalVorholzer = controller.getTotalVorholz();
+    refreshMap();
   }
 
   void checkInCrazy(Event e, var detail, Node target) {
     controller.checkInCrazyBean();
-    counter = controller.getTotal();
-    totalCrazy = controller.getTotalCrazyBean();
+    refreshMap();
   }
 
 }
